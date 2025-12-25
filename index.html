@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Birthday | 31 December</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">🎂 31 Dec</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#messages">Leave a Message</a>
+                <a href="#quiz">Quiz</a>
+                <a href="#review">Year in Review</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="birthday-title">It's My Birthday!</h1>
+            <div class="date-display">
+                <div class="date-large">31</div>
+                <div class="date-month">December</div>
+            </div>
+            <p class="subtitle">Celebrating another trip around the sun</p>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown-container">
+                <h2>Countdown to the Big Day</h2>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="days">00</span>
+                        <span class="countdown-label">Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="hours">00</span>
+                        <span class="countdown-label">Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="minutes">00</span>
+                        <span class="countdown-label">Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-number" id="seconds">00</span>
+                        <span class="countdown-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Birthday Messages Form -->
+    <section id="messages" class="section">
+        <div class="container">
+            <h2>Leave a Birthday Wish</h2>
+            <p class="section-subtitle">Send me an anonymous message to make my day special!</p>
+            
+            <form id="messageForm" class="message-form">
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" placeholder="Write your birthday wish here..." required rows="4"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="sender">Your Name (optional)</label>
+                    <input type="text" id="sender" name="sender" placeholder="Anonymous">
+                </div>
+                
+                <button type="submit" class="btn-primary">Send Birthday Wish 🎉</button>
+            </form>
+            
+            <div class="messages-display">
+                <h3>Recent Wishes</h3>
+                <div id="messagesList" class="messages-list">
+                    <!-- Messages will be dynamically added here -->
+                    <p class="empty-state">No messages yet. Be the first to wish happy birthday!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="section bg-light">
+        <div class="container">
+            <h2>How Well Do You Know Me?</h2>
+            <p class="section-subtitle">Take this fun quiz and see how many you get right!</p>
+            
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <div class="quiz-score">
+                        Score: <span id="score">0</span>/7
+                    </div>
+                    <div class="quiz-progress">
+                        Question <span id="currentQuestion">1</span> of 7
+                    </div>
+                </div>
+                
+                <div class="quiz-content">
+                    <div id="quizQuestion" class="quiz-question">
+                        <!-- Questions will be dynamically loaded -->
+                    </div>
+                    
+                    <div id="quizOptions" class="quiz-options">
+                        <!-- Options will be dynamically loaded -->
+                    </div>
+                    
+                    <div class="quiz-controls">
+                        <button id="prevBtn" class="btn-secondary" disabled>Previous</button>
+                        <button id="nextBtn" class="btn-primary">Next Question</button>
+                        <button id="submitBtn" class="btn-success" style="display: none;">Submit Quiz</button>
+                    </div>
+                </div>
+                
+                <div id="quizResult" class="quiz-result" style="display: none;">
+                    <h3>Quiz Complete!</h3>
+                    <p>Your score: <span id="finalScore">0</span>/7</p>
+                    <p id="resultMessage"></p>
+                    <button id="restartQuiz" class="btn-primary">Take Quiz Again</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Year in Review -->
+    <section id="review" class="section">
+        <div class="container">
+            <h2>My Year in Review</h2>
+            <p class="section-subtitle">Highlights from the past year</p>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">January</div>
+                    <div class="timeline-content">
+                        <h3>Started a New Hobby</h3>
+                        <p>Began learning to play the guitar – still can't play Wonderwall properly!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">April</div>
+                    <div class="timeline-content">
+                        <h3>Travel Adventure</h3>
+                        <p>Took a memorable trip to the mountains. The views were absolutely breathtaking!</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">July</div>
+                    <div class="timeline-content">
+                        <h3>Career Milestone</h3>
+                        <p>Completed an important project at work that I'm really proud of.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">October</div>
+                    <div class="timeline-content">
+                        <h3>Personal Growth</h3>
+                        <p>Read 15 books this year, surpassing my goal of 12. Favorites included...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Made with ❤️ for my birthday celebration</p>
+            <p class="footer-note">Thank you for visiting! Have a slice of virtual cake 🍰</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/countdown.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/messages.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
